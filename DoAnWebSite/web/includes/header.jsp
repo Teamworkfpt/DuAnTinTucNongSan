@@ -31,49 +31,11 @@
             <ul class="nav navbar-nav">
                 <li class="hvr-bounce-to-bottom active"><a href="index.jsp">Home</a></li>
                 <li class="hvr-bounce-to-bottom"><a href="about.jsp">About</a></li>
-
-                <li><a href="#" class="dropdown-toggle hvr-bounce-to-bottom" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Gallery<span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a class="hvr-bounce-to-bottom" href="gallery.jsp">gallery1</a></li>
-                        <li><a class="hvr-bounce-to-bottom" href="#">Gallery2</a></li>
-                        <li><a class="hvr-bounce-to-bottom" href="#">Gallery3</a></li>           
-                    </ul>
-                </li>	
+                <li class="hvr-bounce-to-bottom"><a href="gallery.jsp">Sản Phẩm</a></li>
                 <li class="hvr-bounce-to-bottom"><a href="codes.jsp">Short Codes</a></li>
                 <li class="hvr-bounce-to-bottom"><a href="contact.jsp">Contact Us</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <span class="glyphicon glyphicon-log-in"></span> Đăng nhập
-                        <span class="caret"></span>
-                    </a>
-                    <ul id="login-dp" class="dropdown-menu">
-                        <%
-                            if (session.getAttribute("FullName") == null) {
-                        %>
-                        <%@include file="../Login.jsp" %>
-                        <li>
-                            <span class="glyphicon glyphicon-user">Xin chào, 
-                                <strong style="color: #101010"><%=session.getAttribute("FullName")%> </strong>
-                            </span>
-                            </a>
-                        </li>
-                        <%
-                        } else {
-                        %>
-                        <li>
-                            <span class="glyphicon glyphicon-user">Xin chào, 
-                                <strong style="color: #101010"><%=session.getAttribute("FullName")%> </strong>
-                            </span>
-                            </a>
-                        </li>
-                        <li><a href="Logout.jsp"><span class="glyphicon glyphicon-log-out"></span>Thoát</a></li>
-                            <%
-                                }
-                            %>
-                    </ul>
-                </li>
-                <!--                        <li class="hvr-bounce-to-bottom"><a href="Login.jsp">Login</a></li>-->
-                <li class="hvr-bounce-to-bottom"><a href="#">Register</a></li>
+                <li><a href="Signup.jsp"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                <li><a href="Login.jsp"><span class="glyphicon glyphicon-user"></span> Login</a></li>
             </ul>	
             <div class="clearfix"> </div>
         </div>	
