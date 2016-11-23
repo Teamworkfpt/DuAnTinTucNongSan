@@ -1,46 +1,91 @@
-<%-- 
-    Document   : Login
-    Created on : Nov 22, 2016, 7:36:04 PM
-    Author     : hung
---%>
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<li>
-    <div class="row">
-        <div class="col-md-12">
-            Đăng nhập thông qua
-            <div class="social-buttons">
-                <a href="#" class="btn btn-fb"><i class="fa fa-facebook"></i> Facebook</a>
-                <a href="#" class="btn btn-tw"><i class="fa fa-twitter"></i> Twitter</a>
-            </div>
-            hoặc
-            <form class="form" role="form" method="post" action="LoginServerlet" onsubmit="return validateFormLogin()" accept-charset="UTF-8" name="loginform" id="login-nav">
-                <span id="errlogin"></span>
-                <div class="form-group">
-                    <div class="input-group">
-                        <input type="text" class="form-control input-md" id="InputUsername" name="username" placeholder="Nhập tên đăng nhập"  name="username">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="input-group">
-                        <input type="password" onkeyup="loadXMLDocLogin()" class="form-control input-md" id="InputPassword" name="npwd" placeholder="Mật khẩu"  name="pwd">
-                    </div>
-                </div>
-                <div class="help-block text-right"><a href="">Bạn quên mật khẩu ?</a></div>
+<html>
+<style>
+form {
+    border: 3px solid #f1f1f1;
+}
 
-                <div class="form-group">
-                    <button type="submit" class="btn btn-primary btn-block">Đăng nhập</button>
-                </div>
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
 
-                <div class="checkbox">
-                    <label>
-                        <input type="checkbox"> keep me logged-in
-                    </label>
-                </div>
-            </form>
-            <div class="bottom text-center">
-                New here ? <a href="signup.jsp"><b>Join Us</b></a>
-            </div>
-        </div>
-    </div>
-</li>
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+
+img.avatar {
+    width: 15%;
+    border-radius: 50%;
+}
+
+.container {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}
+</style>
+<body>
+
+<h2>LOGIN </h2>
+
+<form action="action_page.php">
+  <div class="imgcontainer">
+      <img src="images/User.png" alt="Avatar" class="avatar">
+  </div>
+
+  <div class="container">
+    <label><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="uname" required>
+
+    <label><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+        
+    <button type="submit">Login</button>
+    <input type="checkbox" checked="checked"> Remember me
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+    <button type="button" class="cancelbtn">Cancel</button>
+    <span class="psw">Forgot <a href="#">password?</a></span>
+  </div>
+</form>
+
+</body>
+</html>
+
