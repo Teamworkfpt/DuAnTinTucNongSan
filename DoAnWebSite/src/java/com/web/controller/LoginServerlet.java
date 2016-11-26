@@ -36,8 +36,8 @@ public class LoginServerlet extends HttpServlet {
         
         String email, pwd;
          
-        email = request.getParameter("username");
-        pwd = request.getParameter("npwd");
+        email = request.getParameter("email");
+        pwd = request.getParameter("psw");
         boolean kiemTra;
         UserService us = new UserService();
         kiemTra = us.CheckLogin(email, pwd);
