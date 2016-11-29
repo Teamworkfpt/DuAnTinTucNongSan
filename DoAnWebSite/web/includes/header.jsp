@@ -150,6 +150,7 @@ span.psw {
                 <li class="hvr-bounce-to-bottom"><a href="gallery.jsp">Sản Phẩm</a></li>
                 <li class="hvr-bounce-to-bottom"><a href="codes.jsp">Short Codes</a></li>
                 <li class="hvr-bounce-to-bottom"><a href="contact.jsp">Liên Hệ</a></li>
+                <li class="hvr-bounce-to-bottom"><a href="quanlyuser.jsp">User</a></li>
                 <li class="nav navbar-nav navbar-right">
                     <%
                         if(session.getAttribute("fullname")!=null){
