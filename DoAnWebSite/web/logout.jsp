@@ -1,0 +1,15 @@
+<%-- 
+    Document   : loguot
+    Created on : Sep 19, 2016, 3:49:41 PM
+    Author     : fpoly
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<%
+    if (session != null) {
+        session.removeAttribute("FullName");
+
+        response.sendRedirect("index.jsp");
+    }
+%>
