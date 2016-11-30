@@ -231,9 +231,7 @@ li > a {
 
                 <input type="email" id="inputEmail" class="form-control" name="email" placeholder="Email address" required autofocus>
                 <input type="password" id="inputPassword" class="form-control" name="psw" placeholder="Password" required>
-=======
-                <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-                <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+
 
                 <div id="remember" class="checkbox">
                     <label>

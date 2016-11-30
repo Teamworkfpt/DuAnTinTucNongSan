@@ -268,7 +268,7 @@ span.psw {
                 <li class="hvr-bounce-to-bottom"><a href="codes.jsp">Short Codes</a></li>
                 <li class="hvr-bounce-to-bottom"><a href="contact.jsp">Liên Hệ</a></li>
 
-                
+                <li class="hvr-bounce-to-bottom"><a href="quanlyuser.jsp">User</a></li>
                 <li class="nav navbar-nav navbar-right">
                     <%
                         if (session.getAttribute("FullName") == null) {
@@ -325,52 +325,8 @@ span.psw {
 
 
 
-                <li class="hvr-bounce-to-bottom"><a href="quanlyuser.jsp">User</a></li>
-                <li class="nav navbar-nav navbar-right">
-                    <%
-                        if(session.getAttribute("fullname")!=null){
-                    %>
-                    <li><a href="#"> Xin Chào: <%=session.getAttribute("fullname")%></a></li>
-                    <a href="logout.jsp" class="button" class="hvr-bounce-to-bottom">Log Out</a>
-
-                        <%
-                            }else{
-                        %>
-                        <li class="hvr-bounce-to-bottom"><button class="hvr-bounce-to-bottom" onclick="document.getElementById('id02').style.display = 'block'" style="width:auto;"><a>Sign up</a></button></li>
-                        <li class="hvr-bounce-to-bottom"><button class="hvr-bounce-to-bottom" onclick="document.getElementById('id01').style.display = 'block'" style="width:auto;"><a>Login</a></button></li>
-                        <%
-                     }
-                        %>
-                        <%@include file="login.jsp" %>
-                        <%@include file="register.jsp" %>
-                        
-
-                   
-                 
-                    <script>
-                        // Get the modal
-                        var modal = document.getElementById('id01');
-
-                        // When the user clicks anywhere outside of the modal, close it
-                        window.onclick = function(event) {
-                            if (event.target == modal) {
-                                modal.style.display = "none";
-                            }
-                        }
-                    </script>
-                    <script>
-                        // Get the modal
-                        var modal = document.getElementById('id02');
-
-                        // When the user clicks anywhere outside of the modal, close it
-                        window.onclick = function(event) {
-                            if (event.target == modal) {
-                                modal.style.display = "none";
-                            }
-                        }
-                    </script>
-
                 
+               
 
                 </li>
             </ul>	
