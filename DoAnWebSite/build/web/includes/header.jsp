@@ -285,9 +285,9 @@ span.psw {
                     <span class="glyphicon glyphicon-user">Xin chào, 
                         <strong style="color: #101010"><%=session.getAttribute("FullName")%> </strong>
                     </span>
-                    </a>
+                    
                 </li>
-                <li><a href="logout.jsp"><span class="glyphicon glyphicon-log-out"></span>Thoát</a></li>
+                <li><a href="../logout.jsp"><span class="hvr-bounce-to-bottom"></span>Thoát</a></li>
                   
 
 
