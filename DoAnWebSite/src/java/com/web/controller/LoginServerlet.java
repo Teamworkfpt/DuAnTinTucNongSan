@@ -47,8 +47,14 @@ public class LoginServerlet extends HttpServlet {
             Users user = us.GetUsersByEmailOrUsersName(email);
             
             session.setAttribute("FullName", user.getFullName());
-            String url = "/index.jsp";
-            getServletContext().getRequestDispatcher(url).forward(request, response);
+            int quyen = user.getQuyen();
+            if(quyen==1){
+                String url = "admin/index.jsp";
+                response.sendRedirect(url);
+            }else{
+            String url = "index.jsp";
+            response.sendRedirect(url);
+            }
         }else{
            String url = "/about.jsp";
            getServletContext().getRequestDispatcher(url).forward(request, response);
