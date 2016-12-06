@@ -287,7 +287,7 @@ span.psw {
                     </span>
                     
                 </li>
-                <li><a href="../logout.jsp"><span class="hvr-bounce-to-bottom"></span>Thoát</a></li>
+                <li><a href="logout.jsp"><span class="hvr-bounce-to-bottom"></span>Thoát</a></li>
                   
 
 
