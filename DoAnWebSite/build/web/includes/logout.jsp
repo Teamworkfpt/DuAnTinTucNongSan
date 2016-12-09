@@ -15,8 +15,8 @@
         
         <% 
             if(session!=null){
-                session.removeAttribute("fullname");
-                response.sendRedirect("/index.jsp");
+                session.removeAttribute("FullName");
+                response.sendRedirect("index.jsp");
             }
         %>
         

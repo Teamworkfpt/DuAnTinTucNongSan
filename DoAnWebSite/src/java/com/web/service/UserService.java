@@ -47,12 +47,7 @@ public class UserService {
         if(user == null){
             return false;
         }else{
-            if(user.getPwd().equals(Password)){
-                return true;
-                
-            }else{
-                  return false; 
-            }
+            return user.getPwd().equals(Password);
         }
             
     }

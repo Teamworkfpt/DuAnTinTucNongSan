@@ -49,7 +49,7 @@ public class LoginServerlet extends HttpServlet {
             session.setAttribute("FullName", user.getFullName());
             int quyen = user.getQuyen();
             if(quyen==1){
-                String url = "admin/index.jsp";
+                String url = "admin/adminindex.jsp";
                 response.sendRedirect(url);
             }else{
             String url = "index.jsp";
