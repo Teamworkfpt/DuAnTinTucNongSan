@@ -26,7 +26,7 @@
                             <a href="#"><i class="lnr lnr-cog"></i>
                                 <span>Components</span></a>
                             <ul class="sub-menu-list">
-                                <li><a href="grids.jsp">Grids</a> </li>
+                                <li><a href="ManagerNews.jsp">Quản Lý Tin Tức</a> </li>
                                 <li><a href="widgets.jsp">Widgets</a></li>
                             </ul>
                         </li>
