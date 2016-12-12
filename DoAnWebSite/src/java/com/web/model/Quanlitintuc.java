@@ -1,5 +1,5 @@
 package com.web.model;
-// Generated Nov 22, 2016 8:47:33 PM by Hibernate Tools 4.3.1
+// Generated Dec 12, 2016 3:55:52 PM by Hibernate Tools 4.3.1
 
 
 import java.util.Date;
@@ -11,18 +11,22 @@ public class Quanlitintuc  implements java.io.Serializable {
 
 
      private int idtinTuc;
-     private String tentintuc;
-     private Date ngayDang;
+     private int maTin;
+     private String tieuDe;
      private String baiDang;
+     private String mota;
+     private Date ngayDang;
 
     public Quanlitintuc() {
     }
 
-    public Quanlitintuc(int idtinTuc, String tentintuc, Date ngayDang, String baiDang) {
+    public Quanlitintuc(int idtinTuc, int maTin, String tieuDe, String baiDang, String mota, Date ngayDang) {
        this.idtinTuc = idtinTuc;
-       this.tentintuc = tentintuc;
-       this.ngayDang = ngayDang;
+       this.maTin = maTin;
+       this.tieuDe = tieuDe;
        this.baiDang = baiDang;
+       this.mota = mota;
+       this.ngayDang = ngayDang;
     }
    
     public int getIdtinTuc() {
@@ -32,19 +36,19 @@ public class Quanlitintuc  implements java.io.Serializable {
     public void setIdtinTuc(int idtinTuc) {
         this.idtinTuc = idtinTuc;
     }
-    public String getTentintuc() {
-        return this.tentintuc;
+    public int getMaTin() {
+        return this.maTin;
     }
     
-    public void setTentintuc(String tentintuc) {
-        this.tentintuc = tentintuc;
+    public void setMaTin(int maTin) {
+        this.maTin = maTin;
     }
-    public Date getNgayDang() {
-        return this.ngayDang;
+    public String getTieuDe() {
+        return this.tieuDe;
     }
     
-    public void setNgayDang(Date ngayDang) {
-        this.ngayDang = ngayDang;
+    public void setTieuDe(String tieuDe) {
+        this.tieuDe = tieuDe;
     }
     public String getBaiDang() {
         return this.baiDang;
@@ -52,6 +56,20 @@ public class Quanlitintuc  implements java.io.Serializable {
     
     public void setBaiDang(String baiDang) {
         this.baiDang = baiDang;
+    }
+    public String getMota() {
+        return this.mota;
+    }
+    
+    public void setMota(String mota) {
+        this.mota = mota;
+    }
+    public Date getNgayDang() {
+        return this.ngayDang;
+    }
+    
+    public void setNgayDang(Date ngayDang) {
+        this.ngayDang = ngayDang;
     }
 
 
