@@ -14,12 +14,19 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Quản Lý Tin Tức</title>
                  <%@include file="includes/heartag.jsp" %>
-                         <%@include file="includes/HearderAdmin.jsp" %>   
+                       
 
     </head>
-    <body>
-                    <%@include file="includes/left_menu.jsp" %>
-      <%                  int pageSize = 3;
+    <body class="sticky-header left-side-collapsed"  onload="initMap()">
+        <section>
+        <%@include file="includes/left_menu.jsp" %>
+        
+        <div class="main-content">
+                    
+                       <%@include file="includes/HearderAdmin.jsp" %>   
+
+        
+            <%                  int pageSize = 3;
             int pageNumber = 1;
             request.setCharacterEncoding("UTF-8");
             ArrayList<Quanlitintuc> listNew = null;
@@ -49,8 +56,7 @@
                     ? (pageNumber + 1) : pageNumber) + "";
             String prePage = (pageNumber <= 1 ? 1 : pageNumber - 1) + "";
         %>
-
-        <section class="container-fluid">
+           
             <div class="panel panel-default">
                 <!-- Default panel contents -->
                 <div class="panel-heading">Panel heading</div>
@@ -77,7 +83,7 @@
                             <th>STT</th>                        
                             <th> Mã Tin</th>                        
                             <th>Tiêu Đề</th>   
-                            <th>Mô Tả></th>
+                            <th>Mô Tả</th>
                             <th>Bài Đăng </th>
                             <th>Ngày Đăng</th>  
                         </tr>
@@ -140,8 +146,12 @@
                     <li ><a aria-label="Next" href="?pagenumber=<%=nextPage%><%=keyurl%>"><span aria-hidden="true">&raquo;</span></a></li>
                 </ul>
             </div>
-                
+                        </div>
         </section>
 
+                 <script src="js/jquery.nicescroll.js"></script>
+        <script src="js/scripts.js"></script>
+        <!-- Bootstrap Core JavaScript -->
+        <script src="js/bootstrap.min.js"></script>
     </body>
 </html>
