@@ -43,11 +43,11 @@ Contributor(s):
   <session-factory>
     <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
     <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
-    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/db_qltp?db_qltp</property>
+    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/db_qltp</property>
     <property name="hibernate.connection.username">root</property>
     <property name="hibernate.connection.password">123456</property>
-    <mapping resource="com/web/model/Users.hbm.xml"/>
-    <mapping resource="com/web/model/Sanpham.hbm.xml"/>
     <mapping resource="com/web/model/Quanlitintuc.hbm.xml"/>
+    <mapping resource="com/web/model/Sanpham.hbm.xml"/>
+    <mapping resource="com/web/model/Users.hbm.xml"/>
   </session-factory>
 </hibernate-configuration>
