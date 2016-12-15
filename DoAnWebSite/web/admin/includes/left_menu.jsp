@@ -32,7 +32,7 @@
                         </li>
                         <li><a><i class="lnr lnr-spell-check"></i> <span>Quản Lý User</span></a>
                              <ul class="sub-menu-list">
-                                <li><a href="inbox.jsp">User Manager</a> </li>
+                                <li><a href="ManagerUser.jsp">User Manager</a> </li>
                                 <li><a href="compose-mail.jsp">Compose Mail</a></li>
                             </ul>
                         </li>
