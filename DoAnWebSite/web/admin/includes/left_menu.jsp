@@ -23,15 +23,25 @@
                     <ul class="nav nav-pills nav-stacked custom-nav">
                         <li class="active"><a href="adminindex.jsp"><i class="lnr lnr-power-switch"></i><span>Dashboard</span></a></li>
                         <li class="menu-list">
-                            <a href="#"><i class="lnr lnr-cog"></i>
-                                <span>Components</span></a>
+                            <a><i class="lnr lnr-cog"></i>
+                                <span>Quản Lý Tin Tức</span></a>
                             <ul class="sub-menu-list">
-                                <li><a href="ManagerNews.jsp">Quản Lý Tin Tức</a> </li>
-                                <li><a href="widgets.jsp">Widgets</a></li>
+                                <li><a href="ManagerNews.jsp">Manager News</a> </li>
+                                <li><a href="widgets.jsp">Thêm Bài Viết</a></li>
                             </ul>
                         </li>
-                        <li><a href="forms.jsp"><i class="lnr lnr-spell-check"></i> <span>Forms</span></a></li>
-                        <li><a href="tables.jsp"><i class="lnr lnr-menu"></i> <span>Tables</span></a></li>              
+                        <li><a><i class="lnr lnr-spell-check"></i> <span>Quản Lý User</span></a>
+                             <ul class="sub-menu-list">
+                                <li><a href="inbox.jsp">User Manager</a> </li>
+                                <li><a href="compose-mail.jsp">Compose Mail</a></li>
+                            </ul>
+                        </li>
+                        <li><a><i class="lnr lnr-menu"></i> <span>Quản Lý Sản Phẩm</span></a>
+                             <ul class="sub-menu-list">
+                                <li><a href="inbox.jsp">Product manager</a> </li>
+                                <li><a href="compose-mail.jsp">Compose Mail</a></li>
+                            </ul>
+                        </li>              
                         <li class="menu-list"><a href="#"><i class="lnr lnr-envelope"></i> <span>MailBox</span></a>
                             <ul class="sub-menu-list">
                                 <li><a href="inbox.jsp">Inbox</a> </li>
