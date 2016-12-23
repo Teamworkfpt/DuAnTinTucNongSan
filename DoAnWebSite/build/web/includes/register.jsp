@@ -231,13 +231,13 @@
         <!-- <img class="profile-img-card" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" alt="" /> -->
         <img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
         <p id="profile-name" class="profile-name-card"></p>
-        <form class="form-signin"action="SignUpServlet" method="post">
+        <form class="form-signin"action="sigupsevlet" method="post">
             <span id="reauth-email" class="reauth-email"></span>
-            <input type="text" name="Email" class="form-control" placeholder="Email address" required autofocus>
-            <input type="text" name="username" class="form-control" placeholder="Username"  required id="username">
-            <input type="text" name="fullname" class="form-control" placeholder="Full Name" required id="fullname">
-            <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-            <input type="password" id="Repassword" class="form-control" placeholder="Re Password" required>
+            <input type="text" name="Email" id="Email" class="form-control" placeholder="Email address" required autofocus>
+            <input type="text" name="username" id="username" class="form-control" placeholder="Username"  required id="username">
+            <input type="text" name="fullname" id="fullname" class="form-control" placeholder="Full Name" required id="fullname">
+            <input type="password" name="inputPassword" id="inputPassword" class="form-control" placeholder="Password" required>
+            <input type="password" name="Repassword" id="Repassword" class="form-control" placeholder="Re Password" required>
 
             <div id="remember" class="checkbox">
                 <label>
