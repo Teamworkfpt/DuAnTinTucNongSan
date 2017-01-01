@@ -10,7 +10,7 @@
 
                 <!--logo and iconic logo start-->
                 <div class="logo">
-                    <h1><a href="adminindex.jsp">Easy <span>Admin</span></a></h1>
+                    <h1><a href=response.sendRedirect("/index.jsp")>Easy <span>Admin</span></a></h1>
                 </div>
                 <div class="logo-icon text-center">
                     <a href="adminindex.jsp"><i class="lnr lnr-home"></i> </a>
@@ -30,15 +30,18 @@
                                 <li><a href="widgets.jsp">Thêm Bài Viết</a></li>
                             </ul>
                         </li>
-                        <li><a><i class="lnr lnr-spell-check"></i> <span>Quản Lý User</span></a>
+         
+                        <li class="menu-list"><a><i class="lnr lnr-spell-check"></i> 
+                                <span>Quản Lý User</span></a>
                              <ul class="sub-menu-list">
                                 <li><a href="ManagerUser.jsp">User Manager</a> </li>
                                 <li><a href="compose-mail.jsp">Compose Mail</a></li>
                             </ul>
                         </li>
-                        <li><a><i class="lnr lnr-menu"></i> <span>Quản Lý Sản Phẩm</span></a>
+                        <li class="menu-list"><a><i class="lnr lnr-menu"></i>
+                                <span>Quản Lý Sản Phẩm</span></a>
                              <ul class="sub-menu-list">
-                                <li><a href="inbox.jsp">Product manager</a> </li>
+                                <li><a href="ProductManager.jsp">Product manager</a> </li>
                                 <li><a href="compose-mail.jsp">Compose Mail</a></li>
                             </ul>
                         </li>              

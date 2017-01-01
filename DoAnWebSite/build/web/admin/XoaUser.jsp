@@ -18,7 +18,7 @@
         String id = request.getParameter("IDuser");
         boolean kt = us.DeleteUser(Integer.parseInt(id));
         if(kt){
-            response.sendRedirect("quanlyuser.jsp");
+            response.sendRedirect("ManagerUser.jsp");
         }
     %>
     <body>

@@ -1,5 +1,5 @@
 package com.web.model;
-// Generated Dec 12, 2016 3:55:52 PM by Hibernate Tools 4.3.1
+// Generated Jan 1, 2017 9:30:15 PM by Hibernate Tools 4.3.1
 
 
 import java.util.Date;
@@ -10,30 +10,39 @@ import java.util.Date;
 public class Quanlitintuc  implements java.io.Serializable {
 
 
-     private int idtinTuc;
+     private Integer idtinTuc;
      private int maTin;
      private String tieuDe;
      private String baiDang;
      private String mota;
      private Date ngayDang;
+     private String images;
 
     public Quanlitintuc() {
     }
 
-    public Quanlitintuc(int idtinTuc, int maTin, String tieuDe, String baiDang, String mota, Date ngayDang) {
-       this.idtinTuc = idtinTuc;
+	
+    public Quanlitintuc(int maTin, String tieuDe, String baiDang, String mota, Date ngayDang) {
+        this.maTin = maTin;
+        this.tieuDe = tieuDe;
+        this.baiDang = baiDang;
+        this.mota = mota;
+        this.ngayDang = ngayDang;
+    }
+    public Quanlitintuc(int maTin, String tieuDe, String baiDang, String mota, Date ngayDang, String images) {
        this.maTin = maTin;
        this.tieuDe = tieuDe;
        this.baiDang = baiDang;
        this.mota = mota;
        this.ngayDang = ngayDang;
+       this.images = images;
     }
    
-    public int getIdtinTuc() {
+    public Integer getIdtinTuc() {
         return this.idtinTuc;
     }
     
-    public void setIdtinTuc(int idtinTuc) {
+    public void setIdtinTuc(Integer idtinTuc) {
         this.idtinTuc = idtinTuc;
     }
     public int getMaTin() {
@@ -70,6 +79,13 @@ public class Quanlitintuc  implements java.io.Serializable {
     
     public void setNgayDang(Date ngayDang) {
         this.ngayDang = ngayDang;
+    }
+    public String getImages() {
+        return this.images;
+    }
+    
+    public void setImages(String images) {
+        this.images = images;
     }
 
 

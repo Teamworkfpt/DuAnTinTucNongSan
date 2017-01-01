@@ -4,6 +4,9 @@
     Author     : Admin
 --%>
 
+<%@page import="java.util.ArrayList"%>
+<%@page import="com.web.model.Quanlitintuc"%>
+<%@page import="com.web.service.QuanLiTinTucService"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 
@@ -14,59 +17,50 @@
     </head>
     <%@include file="includes/header.jsp" %>
     <body>
+        <%            
+            QuanLiTinTucService us = new QuanLiTinTucService();
+            ArrayList<Quanlitintuc> ListNews = null;
+            ListNews = us.GetNews();
+        %>
         <!--baner-->
         <div class="baner">
             <div class="container">
                 <div class="baner-grids">
+                    <%
+                        for (int i = 0; i < ListNews.size(); i++) {
+                            Quanlitintuc News = ListNews.get(i);
+                            if (i < 2) {
+                    %>
                     <div class="col-md-6 baner-top">
                         <figure class="effect-bubba">
-                            <img src="images/img1.jpg" alt=""/>
+                            <img src="images/<%=News.getImages()%>" alt=""/>
                             <figcaption>
-                                <h4>Enimet pulvinar posuere</h4>
-                                <p>In sit amet sapien eros Integer dolore magna aliqua</p>	
+                                <h4><a href="ChiTietBaiViet.jsp?IDTinTuc=<%= News.getIdtinTuc()%>"><%=News.getTieuDe()%></a></h4>
+                                <p>           <%=News.getMota()%></p>	
                             </figcaption>			
                         </figure>	
                     </div>
-                    <div class="col-md-6 baner-top">
-                        <figure class="effect-bubba">
-                            <img src="images/img2.jpg" alt=""/>
-                            <figcaption>
-                                <h4>Enimet pulvinar posuere</h4>
-                                <p>In sit amet sapien eros Integer dolore magna aliqua</p>	
-                            </figcaption>			
-                        </figure>	
-                    </div>
-                    <div class="clearfix"> </div>
-                    <div class="baner-row">
+                            
+                    <%
+                    } else  {
+                    %>
+
                         <div class="col-md-4 baner-bottom">
                             <figure class="effect-bubba">
                                 <img src="images/img3.jpg" alt=""/>
                                 <figcaption>
-                                    <h4>Enimet pulvinar posuere</h4>
-                                    <p>In sit amet sapien eros Integer dolore magna aliqua</p>	
+                                    <h4><a href="ChiTietBaiViet.jsp?IDTinTuc=<%= News.getIdtinTuc()%>"><%=News.getTieuDe()%></a></h4>
+                                    <p><%=News.getMota()%></p>	
                                 </figcaption>			
                             </figure>	
                         </div>
-                        <div class="col-md-4 baner-bottom">
-                            <figure class="effect-bubba">
-                                <img src="images/img4.jpg" alt=""/>
-                                <figcaption>
-                                    <h4>Enimet pulvinar posuere</h4>
-                                    <p>In sit amet sapien eros Integer dolore magna aliqua</p>	
-                                </figcaption>			
-                            </figure>	
-                        </div>
-                        <div class="col-md-4 baner-bottom">
-                            <figure class="effect-bubba">
-                                <img src="images/img5.jpg" alt=""/>
-                                <figcaption>
-                                    <h4>Enimet pulvinar posuere</h4>
-                                    <p>In sit amet sapien eros Integer dolore magna aliqua</p>	
-                                </figcaption>			
-                            </figure>	
-                        </div>
-                        <div class="clearfix"> </div>
-                    </div>				
+
+                        <%
+                            }
+                        %>
+                    
+                    <% }
+                    %>
                 </div>
             </div>
         </div>
@@ -150,7 +144,7 @@
                         <div class="srvc-img">
                             <span class="glyphicon glyphicon-leaf" aria-hidden="true"></span>
                         </div>
-                        <h5>Ultrices</h5>
+                        <h5>Thực Phẩm</h5>
                         <p>Claritas est etiam processus dynaicus qui Mirum est notare quam </p>
                     </div>
                     <div class="col-md-4 srvc-grids-info">

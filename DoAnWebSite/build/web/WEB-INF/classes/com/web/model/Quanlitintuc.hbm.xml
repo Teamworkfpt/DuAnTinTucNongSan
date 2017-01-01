@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated Dec 12, 2016 3:55:52 PM by Hibernate Tools 4.3.1 -->
+<!-- Generated Jan 1, 2017 9:30:16 PM by Hibernate Tools 4.3.1 -->
 <hibernate-mapping>
     <class name="com.web.model.Quanlitintuc" table="quanlitintuc" catalog="db_qltp" optimistic-lock="version">
-        <id name="idtinTuc" type="int">
+        <id name="idtinTuc" type="java.lang.Integer">
             <column name="IDTinTuc" />
-            <generator class="assigned" />
+            <generator class="identity" />
         </id>
         <property name="maTin" type="int">
             <column name="MaTin" not-null="true" />
@@ -20,8 +20,11 @@
         <property name="mota" type="string">
             <column name="mota" length="65535" not-null="true" />
         </property>
-        <property name="ngayDang" type="time">
-            <column name="NgayDang" length="8" not-null="true" />
+        <property name="ngayDang" type="date">
+            <column name="NgayDang" length="10" not-null="true" />
+        </property>
+        <property name="images" type="string">
+            <column name="images" length="65535" />
         </property>
     </class>
 </hibernate-mapping>

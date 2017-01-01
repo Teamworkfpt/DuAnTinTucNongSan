@@ -1,4 +1,4 @@
-<%-- 
+    <%-- 
     Document   : heartag
     Created on : Dec 4, 2016, 10:56:11 AM
     Author     : Admin
@@ -36,4 +36,5 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!---//webfonts---> 
  <!-- Meters graphs -->
 <script src="js/jquery-1.10.2.min.js"></script>
+<script src="ckeditor/ckeditor.js" type="text/javascript"></script>
 <!-- Placed js at the end of the document so the pages load faster -->

@@ -113,10 +113,10 @@
                                     <td><%= u.getNote()%></td>
 
                                     <td>
-                                        <a href="editusers.jsp?userid=<%= u.getIdUser()%>"><input type="button" name="edit" value="Edit" /></a>
+                                        <a href="editusers.jsp?userid=<%= u.getIdUser()%>"><input class="btn btn-default btn-danger" type="button" name="edit" value="Edit" /></a>
                                     </td>
                                     <td>
-                                        <a href="XoaUser.jsp?IDuser=<%= u.getIdUser()%>"><input type="button" name="Del" value="Del" /></a> 
+                                        <a href="XoaUser.jsp?IDuser=<%= u.getIdUser()%>"><input class="btn btn-default btn-danger" type="button" name="Del" value="Del" /></a> 
                                     </td>
 
                                 </tr>

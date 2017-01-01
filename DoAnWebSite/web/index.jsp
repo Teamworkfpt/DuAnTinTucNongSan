@@ -33,9 +33,9 @@
                     %>
                     <div class="col-md-6 baner-top">
                         <figure class="effect-bubba">
-                            <img src="images/img1.jpg" alt=""/>
+                            <img src="images/<%=News.getImages()%>" alt=""/>
                             <figcaption>
-                                <h4><a href="ChiTietBaiViet.jsp?IDTinTuc<%= News.getIdtinTuc()%>"><%=News.getTieuDe()%></a></h4>
+                                <h4><a href="ChiTietBaiViet.jsp?IDTinTuc=<%= News.getIdtinTuc()%>"><%=News.getTieuDe()%></a></h4>
                                 <p>           <%=News.getMota()%></p>	
                             </figcaption>			
                         </figure>	

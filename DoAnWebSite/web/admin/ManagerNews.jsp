@@ -82,7 +82,8 @@
                         <tr>
                             <th>STT</th>                        
                             <th> Mã Tin</th>                        
-                            <th>Tiêu Đề</th>   
+                            <th>Tiêu Đề</th>
+                            <th>Ảnh Bìa</th>
                             <th>Mô Tả</th>
                             <th>Bài Đăng </th>
                             <th>Ngày Đăng</th>  
@@ -100,6 +101,7 @@
                     <td><%=i%></td>                        
                     <td><%= u.getMaTin()%></td>
                     <td><%= u.getTieuDe()%></td>
+                    <td><image src="../images/<%= u.getImages()%>"height="40px" width="40px;"></td>
                     <td><%= u.getMota()%></td>
                     <td><%= u.getBaiDang()%></td>                
                     <td><%= u.getNgayDang()%></td>                     
@@ -107,10 +109,10 @@
                    
 
                     <td>
-                        <a href="editusers.jsp?userid=<%= u.getIdtinTuc()%>"><input type="button" name="edit" value="Edit" /></a>
+                        <a href="editusers.jsp?userid=<%= u.getIdtinTuc()%>"><input class="btn btn-default btn-danger" type="button" name="edit" value="Edit" /></a>
                </td>
                 <td>
-                    <a href="XoaUser.jsp?IDuser=<%= u.getIdtinTuc()%>"><input type="button" name="Del" value="Del" /></a> 
+                    <a href="XoaUser.jsp?IDuser=<%= u.getIdtinTuc()%>"><input class="btn btn-default btn-danger" type="button" name="Del" value="Del" /></a> 
                 </td>
 
                 </tr>

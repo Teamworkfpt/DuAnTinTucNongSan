@@ -263,18 +263,17 @@ span.psw {
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li class="hvr-bounce-to-bottom active"><a href="index.jsp">Trang Chủ</a></li>
-                <li class="hvr-bounce-to-bottom"><a href="about.jsp">Tin Tức</a></li>
+                <li class="hvr-bounce-to-bottom"><a href="about.jsp">Về Chúng Tôi</a></li>
                 <li class="hvr-bounce-to-bottom"><a href="gallery.jsp">Sản Phẩm</a></li>
-                <li class="hvr-bounce-to-bottom"><a href="codes.jsp">Short Codes</a></li>
                 <li class="hvr-bounce-to-bottom"><a href="contact.jsp">Liên Hệ</a></li>
                 <li class="nav navbar-nav navbar-right">
                     <%
                         if (session.getAttribute("FullName") == null) {
                     %>
 
-                <li class="hvr-bounce-to-bottom"><button class="hvr-bounce-to-bottom" onclick="document.getElementById('id01').style.display = 'block'" style="width:auto;"><a>Login</a></button></li>
+                <li class="hvr-bounce-to-bottom"><button class="hvr-bounce-to-bottom" onclick="document.getElementById('id01').style.display = 'block'" style="width:auto;"><a>Đăng Nhập</a></button></li>
                 
-                <li class="hvr-bounce-to-bottom"><button class="hvr-bounce-to-bottom" onclick="document.getElementById('id02').style.display = 'block'" style="width:auto;"><a>Sign up</a></button></li>
+                <li class="hvr-bounce-to-bottom"><button class="hvr-bounce-to-bottom" onclick="document.getElementById('id02').style.display = 'block'" style="width:auto;"><a>Đăng Ký</a></button></li>
                     <%@include file="login.jsp" %>
                     <%
                     } else {

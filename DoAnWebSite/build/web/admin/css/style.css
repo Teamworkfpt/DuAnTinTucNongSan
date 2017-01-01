@@ -576,7 +576,8 @@ footer  p a:hover{
     display: none;
 }
 div#page-wrapper {
-    padding:2em 2em;
+    padding-top: 6em;
+    padding-left:2em;
 }
 .left-side-collapsed .logo-icon {
     height: 51px;
@@ -3869,6 +3870,9 @@ label.round {
 	color:#000;
 }
 .editor-input.ng-scope p{
+        hight:800px;
+        width:500px; 
+        padding-top:500px ;
 	color:#999;
 	font-size:0.85em;
 	line-height:1.8em;
@@ -5535,6 +5539,9 @@ h3.count.text-light {
 }
 .editor {
   padding: 1em 1em 1.5em 1em;
+}
+.editor2 {
+  padding: 2em 1em 1.5em 1em;
 }
 .link1 {
   padding: 5px 5px;

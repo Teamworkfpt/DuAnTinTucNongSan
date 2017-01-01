@@ -32,7 +32,7 @@
             News = us.GetNews();
 
             //    News = us.GetNewsByID(Matin);
-%>
+        %>
         <div id="container">
             <div id="main-content">
 
@@ -149,30 +149,25 @@
                                 <div class="well">
                                     <h4>Blog Categories</h4>
                                     <div class="row">
-                                        <div class="col-lg-6">
-                                            <ul class="list-unstyled">
-                                                <li><a href="#">Category Name</a>
-                                                </li>
-                                                <li><a href="#">Category Name</a>
-                                                </li>
-                                                <li><a href="#">Category Name</a>
-                                                </li>
-                                                <li><a href="#">Category Name</a>
-                                                </li>
-                                            </ul>
+                                        <%
+                                            for (int i = 0; i < News.size(); i++) {
+                                                Quanlitintuc BNews = News.get(i);
+                                                if (i != Integer.parseInt(Matin)) {
+                                        %>
+                                        <div>
+                                            <figure>
+                                                <figcaption>
+                                                    <h4><a href="ChiTietBaiViet.jsp?IDTinTuc=<%= ListNews.getIdtinTuc()%>"><%=ListNews.getTieuDe()%></a></h4>
+
+                                                </figcaption>			
+                                            </figure>	
                                         </div>
-                                        <div class="col-lg-6">
-                                            <ul class="list-unstyled">
-                                                <li><a href="#">Category Name</a>
-                                                </li>
-                                                <li><a href="#">Category Name</a>
-                                                </li>
-                                                <li><a href="#">Category Name</a>
-                                                </li>
-                                                <li><a href="#">Category Name</a>
-                                                </li>
-                                            </ul>
-                                        </div>
+                                        <%
+                                            }
+                                        %>
+                                        <%
+                                            }
+                                        %>
                                     </div>
                                     <!-- /.row -->
                                 </div>
@@ -204,25 +199,7 @@
                     <div class="content">
 
                         <h1 class="single-post-title "></h1>
-                    <%
-                        for (int i = 0; i < News.size(); i++) {
-                            Quanlitintuc BNews = News.get(i);
-                            if (i > Integer.parseInt(Matin)) {
-                    %>
-                    <div>
-                        <figure>
-                            <figcaption>
-                                <h4><a href="ChiTietBaiViet.jsp?IDTinTuc=<%= ListNews.getIdtinTuc()%>"><%=ListNews.getTieuDe()%></a></h4>
 
-                            </figcaption>			
-                        </figure>	
-                    </div>
-                            <%
-                                }
-                            %>
-                            <%
-                                }
-                            %>
                     </div>
 
                 </div><!--end .content-->

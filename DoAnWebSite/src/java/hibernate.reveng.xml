@@ -42,6 +42,6 @@ Contributor(s):
 <hibernate-reverse-engineering>
   <schema-selection match-catalog="db_qltp"/>
   <table-filter match-name="sanpham"/>
-  <table-filter match-name="quanlitintuc"/>
   <table-filter match-name="users"/>
+  <table-filter match-name="quanlitintuc"/>
 </hibernate-reverse-engineering>

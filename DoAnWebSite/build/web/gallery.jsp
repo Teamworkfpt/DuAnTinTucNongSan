@@ -4,6 +4,9 @@
     Author     : Admin
 --%>
 
+<%@page import="com.web.model.Sanpham"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="com.web.service.SanPhamService"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -11,8 +14,12 @@
         <%@include file="includes/headtag.jsp" %>	
     </head>
     <body>
-       	
+       
         <%@include file="includes/header.jsp" %>
+         <%            SanPhamService us = new SanPhamService();
+            ArrayList<Sanpham> ListNews = null;
+            ListNews = us.GetProduct();
+        %>
         <!--baner-->
         <div class="baner about-bnr">
             <div class="container">
@@ -32,79 +39,25 @@
         <div class="gallery">		
             <div class="container">
                 <h3 class="title">Our Gallery</h3>
-                <div class="gallery-grids">				
+                <div class="gallery-grids">
+                    <%                        
+                        for (int i = 0; i < ListNews.size(); i++) {
+                            Sanpham Product = ListNews.get(i);
+                    %>
+
                     <div class="col-md-4 port-grids view view-fourth">
                         <a class="example-image-link" href="images/img8.jpg" data-lightbox="example-set" data-title="">
-                            <img src="images/img8.jpg" class="img-responsive" alt=""/>
+                            <img src="images/<%=Product.getImage()%>" class="img-responsive" alt=""/>
                             <div class="mask">
-                                <p>A wonderful serenity has taken possession of my which I enjoy with my whole heart.</p>
+                                <h2><a href="ChiTietProduct.jsp?idSanPham=<%= Product.getIdSanPham()%>"><%=Product.getTenSanPham()%></a></h2>
+                                
+                                <p>           <%=Product.getMoTa()%></p>	
+
                             </div>
                         </a>
                     </div>
-                    <div class="col-md-4 port-grids view view-fourth">
-                        <a class="example-image-link" href="images/img3.jpg" data-lightbox="example-set" data-title="">
-                            <img src="images/img3.jpg" class="img-responsive" alt=""/>
-                            <div class="mask">
-                                <p>A wonderful serenity has taken possession of my which I enjoy with my whole heart.</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-4 port-grids view view-fourth">
-                        <a class="example-image-link" href="images/img14.jpg" data-lightbox="example-set" data-title="">
-                            <img src="images/img14.jpg" class="img-responsive" alt=""/>
-                            <div class="mask">
-                                <p>A wonderful serenity has taken possession of my which I enjoy with my whole heart.</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-4 port-grids view view-fourth">
-                        <a class="example-image-link" href="images/img5.jpg" data-lightbox="example-set" data-title="">
-                            <img src="images/img5.jpg" class="img-responsive" alt=""/>
-                            <div class="mask">
-                                <p>A wonderful serenity has taken possession of my which I enjoy with my whole heart.</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-4 port-grids view view-fourth">
-                        <a class="example-image-link" href="images/img13.jpg" data-lightbox="example-set" data-title="">
-                            <img src="images/img13.jpg" class="img-responsive" alt=""/>
-                            <div class="mask">
-                                <p>A wonderful serenity has taken possession of my which I enjoy with my whole heart.</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-4 port-grids view view-fourth">
-                        <a class="example-image-link" href="images/img7.jpg" data-lightbox="example-set" data-title="">
-                            <img src="images/img7.jpg" class="img-responsive" alt=""/>
-                            <div class="mask">
-                                <p>A wonderful serenity has taken possession of my which I enjoy with my whole heart.</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-4 port-grids view view-fourth">
-                        <a class="example-image-link" href="images/img4.jpg" data-lightbox="example-set" data-title="">
-                            <img src="images/img4.jpg" class="img-responsive" alt=""/>
-                            <div class="mask">
-                                <p>A wonderful serenity has taken possession of my which I enjoy with my whole heart.</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-4 port-grids view view-fourth">
-                        <a class="example-image-link" href="images/img10.jpg" data-lightbox="example-set" data-title="">
-                            <img src="images/img10.jpg" class="img-responsive" alt=""/>
-                            <div class="mask">
-                                <p>A wonderful serenity has taken possession of my which I enjoy with my whole heart.</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-4 port-grids view view-fourth">
-                        <a class="example-image-link" href="images/img3.jpg" data-lightbox="example-set" data-title="">
-                            <img src="images/img3.jpg" class="img-responsive" alt=""/>
-                            <div class="mask">
-                                <p>A wonderful serenity has taken possession of my which I enjoy with my whole heart.</p>
-                            </div>
-                        </a>
-                    </div>
+                                
+                    <%}%>
                     <div class="clearfix"> </div>	
                     <script src="js/lightbox-plus-jquery.min.js"></script>
                 </div>				

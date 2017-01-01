@@ -1,5 +1,5 @@
 package com.web.model;
-// Generated Dec 12, 2016 3:55:52 PM by Hibernate Tools 4.3.1
+// Generated Jan 1, 2017 9:30:15 PM by Hibernate Tools 4.3.1
 
 
 
@@ -12,19 +12,22 @@ public class Sanpham  implements java.io.Serializable {
      private int idSanPham;
      private String tenSanPham;
      private String moTa;
+     private String image;
+     private String chiTietSanPham;
 
     public Sanpham() {
     }
 
 	
-    public Sanpham(int idSanPham, String tenSanPham) {
+    public Sanpham(int idSanPham) {
         this.idSanPham = idSanPham;
-        this.tenSanPham = tenSanPham;
     }
-    public Sanpham(int idSanPham, String tenSanPham, String moTa) {
+    public Sanpham(int idSanPham, String tenSanPham, String moTa, String image, String chiTietSanPham) {
        this.idSanPham = idSanPham;
        this.tenSanPham = tenSanPham;
        this.moTa = moTa;
+       this.image = image;
+       this.chiTietSanPham = chiTietSanPham;
     }
    
     public int getIdSanPham() {
@@ -47,6 +50,20 @@ public class Sanpham  implements java.io.Serializable {
     
     public void setMoTa(String moTa) {
         this.moTa = moTa;
+    }
+    public String getImage() {
+        return this.image;
+    }
+    
+    public void setImage(String image) {
+        this.image = image;
+    }
+    public String getChiTietSanPham() {
+        return this.chiTietSanPham;
+    }
+    
+    public void setChiTietSanPham(String chiTietSanPham) {
+        this.chiTietSanPham = chiTietSanPham;
     }
 
 

@@ -17,6 +17,47 @@ import org.hibernate.Transaction;
  * @author Admin
  */
 public class QuanLiTinTucService {
+    public boolean InsertNews(Quanlitintuc Quanlitintuc){
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        Transaction tx = null;
+        
+        try{
+            tx = session.getTransaction();
+            tx.begin();
+            session.saveOrUpdate(Quanlitintuc);
+            tx.commit();
+            return true;
+        }catch (Exception e){
+            if(tx != null){
+                tx.rollback();
+            }
+            System.out.println(e.toString());
+        }finally{
+            session.close();
+        }
+        return false;
+    }
+    public boolean DeleteUser(int Idtintuc){
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        Transaction tx = null;
+        try {
+            tx = session.getTransaction();
+            tx.begin();
+            Quanlitintuc Quanlitintuc = new Quanlitintuc();
+            Quanlitintuc.setIdtinTuc(Idtintuc);
+            session.delete(Quanlitintuc);
+            tx.commit();
+            return true;
+        } catch (Exception e) {
+            if(tx != null){
+                tx.rollback();
+            }
+            System.out.println(e.toString());
+        }finally{
+            session.close();
+        }
+        return false;
+    }
     public int Newscount = 0;
      public ArrayList<Quanlitintuc> getAllNews(int pageSize, int pageNumber){
         Session session = HibernateUtil.getSessionFactory().openSession();
