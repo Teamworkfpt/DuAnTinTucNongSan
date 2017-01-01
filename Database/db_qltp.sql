@@ -23,15 +23,16 @@ DROP TABLE IF EXISTS `quanlitintuc`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `quanlitintuc` (
-  `IDTinTuc` int(11) NOT NULL,
+  `IDTinTuc` int(11) NOT NULL AUTO_INCREMENT,
   `MaTin` int(11) NOT NULL,
   `TieuDe` varchar(200) NOT NULL,
   `BaiDang` text NOT NULL,
   `mota` text NOT NULL,
-  `NgayDang` time NOT NULL,
+  `NgayDang` date NOT NULL,
+  `images` text,
   PRIMARY KEY (`IDTinTuc`),
   UNIQUE KEY `IDTinTuc_UNIQUE` (`IDTinTuc`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -40,6 +41,7 @@ CREATE TABLE `quanlitintuc` (
 
 LOCK TABLES `quanlitintuc` WRITE;
 /*!40000 ALTER TABLE `quanlitintuc` DISABLE KEYS */;
+INSERT INTO `quanlitintuc` VALUES (1,1,'cà phê','Câu chuyện xảy ra vào thập niên 80 thế kỷ trước, khi ông còn là một nhà thiết kế game trẻ tuổi và vừa gia nhập Tecmo, một công ty phát triển game lớn của Nhật Bản. Chỉ sau vài tuần làm việc, nhóm của Tabata đã bị giám đốc của Tecmo lúc bấy giờ là Yoshihito Kakihara triệu tập và khiển trách.','cà phê trong nước và thông tin tiêu dùng','2016-02-02','img1.jpg'),(2,2,'nông sản','guyên nhân là vì những ý kiến đánh giá về Rygar (tựa game do công ty sản xuất dành cho hệ máy Famicom – tức điện tử 4 nút) đi theo chiều hướng rất tệ. Nhóm phát triển của Tabata khi đó đã lập trình thiếu sót phần lưu game. Điều này khiến cho khách hàng phải bật máy liên tục (ngay cả những lúc không dùng) để lưu giữ quá trình chơi. Để giải quyết khủng hoảng này, Tecmo đã tổ chức nhiều cuộc họp báo để xin lỗi khách hàng. Hajime Tabata vẫn nhớ mãi cảnh tượng ban giám đốc và toàn bộ nhóm phát triển Tecmo phải quỳ gối xuống sàn để cầu xin sự tha thứ từ phía các nhà bán l','Thị Trường nông sản trong ngoài nước','2016-03-03','img1.jpg'),(3,3,'Tài chính','Dịch vụ thám tử chuyên nghiệp nhất tại Việt Nam','Dịch vụ thám tử chuyên nghiệp nhất tại Việt Nam','2016-03-03','img3.jpg'),(4,4,'Đồ chơi','hop đồ chơi và đồ dùng cho bé BabyBorn.vn trân trọng gửi tới quý khách hàng chương trình ưu đãi mùa giáng sinh năm nay✨✨✨ ','hop đồ chơi và đồ dùng cho bé','2016-02-06','img3.jpg'),(5,5,'Tiền tệ','hop đồ chơi và đồ dùng cho bé BabyBorn.vn trân trọng gửi tới quý khách hàng chương trình ưu đãi mùa giáng sinh năm nay✨✨✨ ','hop đồ chơi và đồ dùng cho bé BabyBorn.vn trân trọng gửi tới quý khách hàng chương trình ưu đãi mùa giáng sinh năm nay✨✨✨ ','2016-09-09','img3.jpg');
 /*!40000 ALTER TABLE `quanlitintuc` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -52,8 +54,10 @@ DROP TABLE IF EXISTS `sanpham`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `sanpham` (
   `idSanPham` int(11) NOT NULL,
-  `TenSanPham` varchar(45) NOT NULL,
-  `MoTa` varchar(45) DEFAULT NULL,
+  `TenSanPham` varchar(45) DEFAULT NULL,
+  `MoTa` varchar(3000) DEFAULT NULL,
+  `Image` text,
+  `ChiTietSanPham` varchar(3000) DEFAULT NULL,
   PRIMARY KEY (`idSanPham`),
   UNIQUE KEY `idSanPham_UNIQUE` (`idSanPham`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -65,6 +69,7 @@ CREATE TABLE `sanpham` (
 
 LOCK TABLES `sanpham` WRITE;
 /*!40000 ALTER TABLE `sanpham` DISABLE KEYS */;
+INSERT INTO `sanpham` VALUES (1,'Rau Xanh','tên gọi chung của các loại thực vật có thể ăn được dưới dạng lá là phổ biến tuy trong thực tế có nhiều loại ăn hoa, củ, quả cũng có thể gộp chung vào các loại rau.','img8.jpg','Có rất nhiều loại rau ăn lá trong đó có thể kể đến rau ngót Sauropus androgynus, rau dền Amaranthus viridus, rau muống Ipomoea aquatica, rau cần nước Oenanthe javanica, rau lang Ipomoea batatan v.v.'),(2,'Rau Xanh','tên gọi chung của các loại thực vật có thể ăn được dưới dạng lá là phổ biến tuy trong thực tế có nhiều loại ăn hoa, củ, quả cũng có thể gộp chung vào các loại rau.','img3.jpg','Có rất nhiều loại rau ăn lá trong đó có thể kể đến rau ngót Sauropus androgynus, rau dền Amaranthus viridus, rau muống Ipomoea aquatica, rau cần nước Oenanthe javanica, rau lang Ipomoea batatan v.v.'),(3,'Rau Xanh','tên gọi chung của các loại thực vật có thể ăn được dưới dạng lá là phổ biến tuy trong thực tế có nhiều loại ăn hoa, củ, quả cũng có thể gộp chung vào các loại rau.','img14.jpg','Có rất nhiều loại rau ăn lá trong đó có thể kể đến rau ngót Sauropus androgynus, rau dền Amaranthus viridus, rau muống Ipomoea aquatica, rau cần nước Oenanthe javanica, rau lang Ipomoea batatan v.v.'),(4,'Rau Xanh','tên gọi chung của các loại thực vật có thể ăn được dưới dạng lá là phổ biến tuy trong thực tế có nhiều loại ăn hoa, củ, quả cũng có thể gộp chung vào các loại rau.','img5.jpg','Có rất nhiều loại rau ăn lá trong đó có thể kể đến rau ngót Sauropus androgynus, rau dền Amaranthus viridus, rau muống Ipomoea aquatica, rau cần nước Oenanthe javanica, rau lang Ipomoea batatan v.v.'),(5,'Rau Xanh','tên gọi chung của các loại thực vật có thể ăn được dưới dạng lá là phổ biến tuy trong thực tế có nhiều loại ăn hoa, củ, quả cũng có thể gộp chung vào các loại rau.','img13.jpg','Có rất nhiều loại rau ăn lá trong đó có thể kể đến rau ngót Sauropus androgynus, rau dền Amaranthus viridus, rau muống Ipomoea aquatica, rau cần nước Oenanthe javanica, rau lang Ipomoea batatan v.v.'),(6,'Rau Xanh','tên gọi chung của các loại thực vật có thể ăn được dưới dạng lá là phổ biến tuy trong thực tế có nhiều loại ăn hoa, củ, quả cũng có thể gộp chung vào các loại rau.','img7.jpg','Có rất nhiều loại rau ăn lá trong đó có thể kể đến rau ngót Sauropus androgynus, rau dền Amaranthus viridus, rau muống Ipomoea aquatica, rau cần nước Oenanthe javanica, rau lang Ipomoea batatan v.v.'),(7,'Rau Xanh','tên gọi chung của các loại thực vật có thể ăn được dưới dạng lá là phổ biến tuy trong thực tế có nhiều loại ăn hoa, củ, quả cũng có thể gộp chung vào các loại rau.','img4.jpg','Có rất nhiều loại rau ăn lá trong đó có thể kể đến rau ngót Sauropus androgynus, rau dền Amaranthus viridus, rau muống Ipomoea aquatica, rau cần nước Oenanthe javanica, rau lang Ipomoea batatan v.v.'),(8,'Rau Xanh','tên gọi chung của các loại thực vật có thể ăn được dưới dạng lá là phổ biến tuy trong thực tế có nhiều loại ăn hoa, củ, quả cũng có thể gộp chung vào các loại rau.','img10.jpg','Có rất nhiều loại rau ăn lá trong đó có thể kể đến rau ngót Sauropus androgynus, rau dền Amaranthus viridus, rau muống Ipomoea aquatica, rau cần nước Oenanthe javanica, rau lang Ipomoea batatan v.v.'),(9,'Củ Quả','Là các loại củ quả được mọc ra từ cành hoặc là rễ','img1.jpg',NULL);
 /*!40000 ALTER TABLE `sanpham` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -111,4 +116,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-12-14 14:23:45
+-- Dump completed on 2017-01-01 22:49:58
