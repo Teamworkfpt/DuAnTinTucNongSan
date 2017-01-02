@@ -42,7 +42,7 @@
                                 <span>Quản Lý Sản Phẩm</span></a>
                              <ul class="sub-menu-list">
                                 <li><a href="ProductManager.jsp">Product manager</a> </li>
-                                <li><a href="compose-mail.jsp">Compose Mail</a></li>
+                                <li><a href="AddNewProduct.jsp">Add New Product</a></li>
                             </ul>
                         </li>              
                         <li class="menu-list"><a href="#"><i class="lnr lnr-envelope"></i> <span>MailBox</span></a>
