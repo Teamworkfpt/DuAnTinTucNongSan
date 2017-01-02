@@ -47,7 +47,7 @@
 
                         <div class="col-md-4 baner-bottom">
                             <figure class="effect-bubba">
-                                <img src="images/<%=News.getImages()%>" alt=""/>
+                                <img src="images/img3.jpg" alt=""/>
                                 <figcaption>
                                     <h4><a href="ChiTietBaiViet.jsp?IDTinTuc=<%= News.getIdtinTuc()%>"><%=News.getTieuDe()%></a></h4>
                                     <p><%=News.getMota()%></p>	
