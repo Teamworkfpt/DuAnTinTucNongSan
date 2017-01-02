@@ -26,37 +26,27 @@
                 <!-- //header-ends -->
                 <div id="page-wrapper">
                     <div class="graphs">
-
-
                         <div class="widget_bottom">
-
                             <div class="col-md-8 widget_bottom_left">
                                 <div class="widget_1_box2">
                                     <div class="widget-body">
-                                        
                                         <div class="editor">
                                             <form id="article-form" name="article-form" method="post" action="AddNewsServlet"> 
-                                            <div class="form-group">
-                                                <input type="text" class="form-control1 input-lg" placeholder="Enter title ...">
-                                            </div>
-                                            
-                                            <div class="editor-content ng-isolate-scope" mb-scrollbar="contentScrollbar">
-                                                <textarea name="bodyText" style="visibility: hidden; display: none;"></textarea> <script type="text/javascript"> CKEDITOR.replace('bodyText'); </script>  </form> 
-                                               <div class="editor2">
-                                            <input type="text" class="form-control1 input-lg" placeholder="Enter Mô Tả ...">
-                                            <button class="btn btn-default btn-danger magin:auto" onClick="#">Submit</button>
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control1 input-lg" placeholder="Enter title ...">
+                                                </div>
+                                                <div class="editor-content ng-isolate-scope" mb-scrollbar="contentScrollbar">
+                                                    <textarea name="bodyText" style="visibility: hidden; display: none;"></textarea> <script type="text/javascript"> CKEDITOR.replace('bodyText');</script> 
+                                                    <div class="editor2">
+                                                        <input type="text" class="form-control1 input-lg" placeholder="Enter Mô Tả ...">
+                                                        <button class="btn btn-default btn-danger magin:auto" onClick="#">Submit</button>
+                                                    </div>
+
+                                                </div
+                                            </form>
                                         </div>
-                                              
-                                            </div></form>
-                                            
-                                            
-                                               
-                                        </div>
-                                        
                                     </div>
-                                    
                                 </div>	
-                                
                             </div>
                             <div class="col-md-4 widget_bottom_right">
                                 <div class="banner-bottom-video-grid-left">

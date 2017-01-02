@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated Jan 1, 2017 9:30:16 PM by Hibernate Tools 4.3.1 -->
+<!-- Generated Jan 2, 2017 8:27:42 PM by Hibernate Tools 4.3.1 -->
 <hibernate-mapping>
     <class name="com.web.model.Sanpham" table="sanpham" catalog="db_qltp" optimistic-lock="version">
         <id name="idSanPham" type="int">
@@ -19,6 +19,9 @@
         </property>
         <property name="chiTietSanPham" type="string">
             <column name="ChiTietSanPham" length="3000" />
+        </property>
+        <property name="giaSanPham" type="double">
+            <column name="GiaSanPham" precision="22" scale="0" not-null="true" />
         </property>
     </class>
 </hibernate-mapping>
